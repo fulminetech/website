@@ -5,21 +5,26 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tailwind CSS Boilerplate</title>
+    <title>Fulmine Tech.</title>
 
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-in forwards;
+      }
+    </style>
 
-    <script
-      async
-      defer
-      data-domain="open.michelegera.dev"
-      src="https://analytics.michelegera.dev/js/plausible.js"
-    ></script>
   </head>
 
-  <body
-    class="relative antialiased tracking-tight text-gray-500 bg-black font-inter"
-  >
+  <body class="relative antialiased tracking-tight text-gray-500 bg-black font-inter" >
     <div
       class="absolute inset-0 bg-top bg-no-repeat -translate-y-1/2 -translate-x-1/2"
       style="background-image: url('img/illustration-section-01.svg');"
@@ -32,6 +37,7 @@
       <div class="flex items-center justify-between py-6 animated fadeInUp">
         <a href="#">
           <img class="block w-8 h-8" src="img/logo.svg" alt="" />
+          FULMINE TECH.
         </a>
         <a href="#">
           <svg
@@ -43,174 +49,105 @@
           </svg>
         </a>
         <div class="flex items-center hidden mb-4 md:block">
-          <a class="mr-8 font-semibold hover:text-white" href="#"
-            >Documentation</a
+          <a class="mr-8 font-semibold hover:text-white" href="#overview"
+            >Overview</a
           >
-          <a class="bg-indigo-600 btn hover:bg-indigo-500" href="#">Sign up</a>
+          <a class="mr-8 font-semibold hover:text-white" href="#features"
+            >Features</a
+          >
+          <a class="mr-8 font-semibold hover:text-white" href="#testimonials"
+            >Testimonials</a
+          >
+          <a class="mr-8 font-semibold hover:text-white" href="#" onclick="toggleModal('modal-id')"
+            >Contact Us</a
+          >
+          <a class="bg-indigo-600 btn hover:bg-indigo-500" href="#">Live DEMO</a>
         </div>
       </div>
+      <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center
+                  items-center" id="modal-id">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+          <!--content-->
+          <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <!--header-->
+            <div class="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
+              <h3 class="text-3xl font-semibold">
+                Modal Title
+              </h3>
+              <button
+                class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                onclick="toggleModal('modal-id')">
+                <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                  ×
+                </span>
+              </button>
+            </div>
+            <!--body-->
+            <div class="relative p-6 flex-auto">
+              <p class="my-4 text-gray-600 text-lg leading-relaxed">
+                I always felt like I could do anything. That’s the main
+                thing people are controlled by! Thoughts- their perception
+                of themselves! They're slowed down by their perception of
+                themselves. If you're taught you can’t do anything, you
+                won’t do anything. I was taught I could do everything.
+              </p>
+            </div>
+            <!--footer-->
+            <div class="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
+              <button
+                class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
+                type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
+                Close
+              </button>
+              <button
+                class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
       <h1
         class="px-8 mt-16 mb-4 text-5xl font-extrabold leading-tight text-center text-white animated fadeInUp xl:text-6xl"
         style="animation-delay: 250ms;"
       >
-        Landing template for <span class="text-indigo-700">startups</span>
+        HMI and SCADA Solutions for <span class="text-indigo-700"> </br> INDUSTRY 4.0</span>
       </h1>
       <p
         class="max-w-xl mx-auto mb-8 text-xl text-center animated fadeInUp xl:max-w-2xl"
         style="animation-delay: 500ms;"
       >
-        Our landing page template works on all devices, so you only have to set
-        it up once, and get beautiful results forever.
+        Introducing next generation HMI dashboards and Distributed Control Networks to control, visualize and analyse all your industrial processes.</br>
+        Also, now your assets report to you directly.
       </p>
-      <div
-        class="flex flex-col justify-center max-w-xs mx-auto mb-12 animated fadeInUp sm:max-w-full sm:flex-row"
-        style="animation-delay: 750ms;"
-      >
-        <a
-          class="w-full mb-4 whitespace-no-wrap bg-indigo-600 btn btn-tall md:w-auto hover:bg-indigo-500 sm:mr-2"
-        >
-          Get started
-        </a>
-        <a
-          class="w-full mb-4 whitespace-no-wrap bg-gray-800 btn btn-tall md:w-auto hover:bg-gray-600 sm:ml-2"
-          href="#"
-        >
-          View on Github
-        </a>
-      </div>
-      <div class="mb-16 animated fadeIn" style="animation-delay: 1000ms;">
+      <div class="mb-16 animated fadeIn" style="animation-delay: 750ms;">
         <img
           class="block w-full max-w-5xl mx-auto rounded"
           src="img/video-placeholder.jpg"
           alt=""
         />
       </div>
-      <div>
-        <h2 class="title sm:text-4xl md:text-5xl">
-          Build up the whole picture
-        </h2>
-        <p class="mb-16 intro sm:max-w-xl">
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum — semper quis lectus nulla
-          at volutpat diam ut venenatis.
-        </p>
-        <ul
-          class="flex flex-col flex-wrap justify-center mb-20 text-center border-b border-gray-900 sm:flex-row"
-        >
-          <li
-            class="w-full px-6 mb-8 animated fadeIn sm:mb-16 md:w-1/2 lg:w-1/3"
-          >
-            <span
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full"
-            >
-              <img src="img/feature-tile-icon-01.svg" alt="" />
-            </span>
-            <h3 class="mb-2 text-2xl font-bold text-white">
-              Robust Workflow
-            </h3>
-            <p class="max-w-xs mx-auto text-lg text-gray-500">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat.
-            </p>
-          </li>
-          <li
-            class="w-full px-6 mb-8 animated fadeIn sm:mb-16 md:w-1/2 lg:w-1/3"
-          >
-            <span
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full"
-            >
-              <img src="img/feature-tile-icon-02.svg" alt="" />
-            </span>
-            <h3 class="mb-2 text-2xl font-bold text-white">
-              Robust Workflow
-            </h3>
-            <p class="max-w-xs mx-auto text-lg text-gray-500">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat.
-            </p>
-          </li>
-          <li
-            class="w-full px-6 mb-8 sm:mb-16 animated fadeIn md:w-1/2 lg:w-1/3"
-          >
-            <span
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full"
-            >
-              <img src="img/feature-tile-icon-03.svg" alt="" />
-            </span>
-            <h3 class="mb-2 text-2xl font-bold text-white">
-              Robust Workflow
-            </h3>
-            <p class="max-w-xs mx-auto text-lg text-gray-500">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat.
-            </p>
-          </li>
-          <li
-            class="w-full px-6 mb-8 sm:mb-16 animated fadeIn md:w-1/2 lg:w-1/3"
-          >
-            <span
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full"
-            >
-              <img src="img/feature-tile-icon-04.svg" alt="" />
-            </span>
-            <h3 class="mb-2 text-2xl font-medium text-white">
-              Robust Workflow
-            </h3>
-            <p class="max-w-xs mx-auto text-lg text-gray-500">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat.
-            </p>
-          </li>
-          <li
-            class="w-full px-6 mb-8 sm:mb-16 animated fadeIn md:w-1/2 lg:w-1/3"
-          >
-            <span
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full"
-            >
-              <img src="img/feature-tile-icon-05.svg" alt="" />
-            </span>
-            <h3 class="mb-2 text-2xl font-medium text-white">
-              Robust Workflow
-            </h3>
-            <p class="max-w-xs mx-auto text-lg text-gray-500">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat.
-            </p>
-          </li>
-          <li
-            class="w-full px-8 mb-8 sm:mb-16 animated fadeIn md:w-1/2 lg:w-1/3"
-          >
-            <span
-              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full"
-            >
-              <img src="img/feature-tile-icon-06.svg" alt="" />
-            </span>
-            <h3 class="mb-2 text-2xl font-medium text-white">
-              Robust Workflow
-            </h3>
-            <p class="max-w-xs mx-auto text-lg text-gray-500">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat.
-            </p>
-          </li>
-        </ul>
+      <div class="flex flex-col justify-center max-w-xs mx-auto mb-12 animated fadeInUp sm:max-w-full sm:flex-row"
+        style="animation-delay: 1000ms;">
+        <a class="w-full mb-4 whitespace-no-wrap bg-indigo-600 btn btn-tall md:w-auto hover:bg-indigo-500 sm:mr-2">
+          Live DEMO
+        </a>
+        <a href="#subscribe" class="modal-open w-full mb-4 whitespace-no-wrap bg-gray-800 btn btn-tall md:w-auto hover:bg-gray-600 sm:ml-2" href="#">
+          Case Study
+        </a>
       </div>
-      <div class="mb-16 border-b border-gray-800">
-        <h2 class="mb-2 title sm:text-4xl md:text-5xl">
+      <div id="overview" class="mb-16 border-b border-gray-800">
+        <h2 class="mb-2 title sm:text-4xl md:text-5xl js-show-on-scroll">
           Workflow that just works
         </h2>
-        <p class="mb-20 intro sm:max-w-xl">
+        <p class="mb-20 intro sm:max-w-xl js-show-on-scroll">
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
           officia deserunt mollit anim id est laborum — semper quis lectus nulla
           at volutpat diam ut venenatis.
         </p>
-        <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+        <div class="flex flex-col mb-8 js-show-on-scroll sm:flex-row ">
           <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last">
             <img
               class="rounded-sm"
@@ -224,20 +161,20 @@
             <p
               class="mb-2 text-sm font-semibold leading-none text-center text-indigo-600 uppercase sm:text-left"
             >
-              Lightning fast workflow
+              HIGH PERFORMANCE. RELIABLE.
             </p>
             <h3 class="title title-small sm:text-left md:text-4xl">
-              Data-driven insights
+              Hardware and Communications
             </h3>
             <p class="text md:text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Our hardware is designed to work 24/7 in the harshest environment.
+              It is equipped with latest software technologies that are proven at scale.
+              Ease of retro-fitting with existing PLCs, Drives and Meters makes it easily
+              plug and play.              
             </p>
           </div>
         </div>
-        <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+        <div class="flex flex-col mb-8 js-show-on-scroll sm:flex-row">
           <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12">
             <img
               class="rounded-sm"
@@ -251,20 +188,19 @@
             <p
               class="mb-2 text-sm font-semibold leading-none text-center text-indigo-600 uppercase sm:text-left"
             >
-              Lightning fast workflow
+              Secure. Fully Managed.
             </p>
             <h3 class="title title-small sm:text-left md:text-4xl">
-              Data-driven insights
+              Solution Deployment 
             </h3>
             <p class="text md:text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Deployment is stratergised based on the application.</br> 
+              Our entry level edge gateway can be deployed as an on premise server or an edge gateway.  
+              We provide fully managed cloud integration with enhanced security.
             </p>
           </div>
         </div>
-        <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+        <div class="flex flex-col mb-8 js-show-on-scroll sm:flex-row">
           <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last">
             <img
               class="rounded-sm"
@@ -284,21 +220,123 @@
               Data-driven insights
             </h3>
             <p class="text md:text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Your process data is condensed into a meaningful single page report.
+              Delivered directly from the system to you daily, weekly, monthly and quarterly.
+              Export selected data from the database in PDF or Excel format on demand. </br>
+              Improve production quality and reduce downtime.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col mb-8 js-show-on-scroll sm:flex-row">
+          <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12">
+            <img class="rounded-sm" src="img/features-split-image-02.png" alt="" />
+          </div>
+          <div class="flex flex-col justify-center mb-8 sm:w-1/2 md:w-7/12 sm:pl-16">
+            <p class="mb-2 text-sm font-semibold leading-none text-center text-indigo-600 uppercase sm:text-left">
+              Enhanced Intelligence
+            </p>
+            <h3 class="title title-small sm:text-left md:text-4xl">
+              Key Application Areas
+            </h3>
+            <p class="text md:text-left">
+              Our solutions can be employed in pharmaceutical, chemical, textile 
+              and various other manufacturing, processing and packaging industries.</br>
+              Ability to retro-fit in existing control systems makes it ideal for
+              industries looking for digital transformation.
             </p>
           </div>
         </div>
       </div>
-      <div class="mb-16">
+      <div id="features" class="js-show-on-scroll">
         <h2 class="title sm:text-4xl md:text-5xl">
-          Customer testimonials
+          Features
+        </h2>
+        <p class="mb-16 intro sm:max-w-xl">
+          Cultivate your Process Intelligence to Business Intelligenced.
+        </p>
+        <ul class="flex flex-col flex-wrap justify-center mb-20 text-center border-b border-gray-900 sm:flex-row">
+          <li class="w-full px-6 mb-8 animated fadeIn sm:mb-16 md:w-1/2 lg:w-1/3">
+            <span
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full">
+              <img src="img/feature-tile-icon-01.svg" alt="" />
+            </span>
+            <h3 class="mb-2 text-2xl font-bold text-white">
+              Monitor
+            </h3>
+            <p class="max-w-xs mx-auto text-lg text-gray-500">
+              Visualise your most demanding manufacturing process to
+              analyse and rectify process anomaly in realtime.
+            </p>
+          </li>
+          <li class="w-full px-6 mb-8 animated fadeIn sm:mb-16 md:w-1/2 lg:w-1/3">
+            <span
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full">
+              <img src="img/feature-tile-icon-02.svg" alt="" />
+            </span>
+            <h3 class="mb-2 text-2xl font-bold text-white">
+              Store
+            </h3>
+            <p class="max-w-xs mx-auto text-lg text-gray-500">
+              Store and forward your process data in a scalable time-series databaseto analyse and extract valuable insights.
+            </p>
+          </li>
+          <li class="w-full px-6 mb-8 sm:mb-16 animated fadeIn md:w-1/2 lg:w-1/3">
+            <span
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full">
+              <img src="img/feature-tile-icon-03.svg" alt="" />
+            </span>
+            <h3 class="mb-2 text-2xl font-bold text-white">
+              Control
+            </h3>
+            <p class="max-w-xs mx-auto text-lg text-gray-500">
+              Control pump, motors, valves and other actuators.
+              Configure and tweak your process parameters.
+            </p>
+          </li>
+          <li class="w-full px-6 mb-8 sm:mb-16 animated fadeIn md:w-1/2 lg:w-1/3">
+            <span
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full">
+              <img src="img/feature-tile-icon-04.svg" alt="" />
+            </span>
+            <h3 class="mb-2 text-2xl font-medium text-white">
+              Analyse
+            </h3>
+            <p class="max-w-xs mx-auto text-lg text-gray-500">
+              Analyse historic data and filter data as per your use case.
+            </p>
+          </li>
+          <li class="w-full px-6 mb-8 sm:mb-16 animated fadeIn md:w-1/2 lg:w-1/3">
+            <span
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full">
+              <img src="img/feature-tile-icon-05.svg" alt="" />
+            </span>
+            <h3 class="mb-2 text-2xl font-medium text-white">
+              Dynamic Report
+            </h3>
+            <p class="max-w-xs mx-auto text-lg text-gray-500">
+              Generate customised production report in PDF on demand. Export your data in Excel format.
+            </p>
+          </li>
+          <li class="w-full px-8 mb-8 sm:mb-16 animated fadeIn md:w-1/2 lg:w-1/3">
+            <span
+              class="flex items-center justify-center w-16 h-16 mx-auto mb-4 text-3xl text-white bg-indigo-700 rounded-full">
+              <img src="img/feature-tile-icon-06.svg" alt="" />
+            </span>
+            <h3 class="mb-2 text-2xl font-medium text-white">
+              Audit
+            </h3>
+            <p class="max-w-xs mx-auto text-lg text-gray-500">
+              Audit your machine and system performance at a click of a button.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div id="testimonials" class="mb-16">
+        <h2 class="title sm:text-4xl md:text-5xl">
+          Customer Testimonials
         </h2>
         <p class="intro sm:max-w-xl">
-          Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper
-          quis lectus nulla at volutpat diam ut venenatis tellus—in ornare.
+          Hear from the industries that believe in us.
         </p>
         <div
           class="flex flex-col justify-center -ml-4 -mr-4 md:flex-row md:flex-wrap"
@@ -329,10 +367,10 @@
                 mollit anim id est laborum cillum dolore eu fugiat.
               </blockquote>
               <p class="font-semibold">
-                <span class="text-white">Roman Level</span>
+                <span class="text-white">Praveen Patel</span>
                 <span class="text-gray-700">/</span>
                 <a href="#" class="text-green-400 hover:text-green-300"
-                  >AppName</a
+                  >Director, Syscon Automation</a
                 >
               </p>
             </div>
@@ -366,7 +404,7 @@
                 <span class="text-white">Diana Rynzhuk</span>
                 <span class="text-gray-700">/</span>
                 <a href="#" class="text-green-400 hover:text-green-300"
-                  >AppName</a
+                  >CEO, Singhania Tableting</a
                 >
               </p>
             </div>
@@ -407,39 +445,28 @@
           </div>
         </div>
       </div>
-      <div
+      <div id="subscribe"
         class="flex flex-col animated fadeIn items-center px-4 py-8 mb-16 bg-indigo-700 bg-right-bottom bg-no-repeat bg-cover sm:flex-row sm:py-16 sm:px-12"
         style="background-image: url('img/cta-illustration.svg');"
       >
         <h2
           class="max-w-xs mx-auto mb-10 text-2xl font-bold text-center text-white sm:text-3xl sm:mr-10 sm:max-w-full sm:text-left sm:w-1/3 sm:mx-0 sm:mb-0 md:w-1/2 lg:w-7/12"
         >
-          For previewing layouts and visual?
+          Get a free copy of our latest case study.
         </h2>
         <div class="flex flex-grow w-full sm:w-2/3 md:w-1/2 lg:w-5/12">
           <form
-            class="flex items-center w-full p-4 bg-white rounded-sm space-between"
+            class="flex items-center w-full p-4 bg-transparent rounded-sm space-between"
             action="#"
           >
-            <input
-              class="flex-grow text-gray-900 placeholder-gray-500 bg-white appearance-none"
-              type="text"
-              placeholder="Your best email"
-            />
-            <svg
-              class="text-indigo-700 fill-current"
-              width="16"
-              height="12"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z"
-                fill="#376DF9"
-              ></path>
-            </svg>
+            <input type="email" placeholder="Your Email ID"
+              class="flex-1 appearance-none rounded shadow p-3 text-grey-dark mr-2 focus:outline-none">
+            <button type="submit"
+              class="bg-blue-600 text-white text-base font-semibold rounded-md shadow-md hover:bg-indigo-600 p-3">
+              Submit</button>
           </form>
         </div>
-      </div>
+      </div>  
       <div class="flex flex-col items-center sm:flex-row sm:justify-between">
         <a class="text-indigo-700" href="#">
           <img src="img/logo.svg" alt="" class="mx-auto mb-4" />
@@ -497,9 +524,9 @@
       </div>
       <div class="flex flex-col justify-between mb-8 text-center sm:flex-row">
         <p class="order-last mb-4 text-sm text-gray-500 sm:order-first">
-          Designed by
-          <a href="https://cruip.com/" class="text-white">Cruip</a>. Coded by
-          <a href="https://michelegera.dev/" class="text-white">michelegera</a>
+          Designed In
+          <a href="https://cruip.com/" class="text-white">India</a>. Coded by
+          <a href="https://michelegera.dev/" class="text-white">Fulmine Tech.</a>
         </p>
         <ul class="flex flex-row justify-center mb-6 -ml-4 -mr-4 text-sm">
           <li>
@@ -508,16 +535,54 @@
           <li>
             <a href="#" class="px-4 text-gray-500 hover:text-white">About us</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#" class="px-4 text-gray-500 hover:text-white">FAQ's</a>
-          </li>
-          <li>
-            <a href="#" class="text-gray-500 hover:text-white px-4" <a href="#"
-            class="text-gray-500 hover:text-white px-4" <a href="#"
-            class="text-gray-500 hover:text-white px-4"
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
+
+    <!-- Scroll Script -->
+    <script>
+      const callback = function (entries) {
+          entries.forEach((entry) => {
+            console.log(entry);
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fadeIn");
+            } else {
+              entry.target.classList.remove("animate-fadeIn");
+            }
+          });
+        };
+
+        const observer = new IntersectionObserver(callback);
+
+        const targets = document.querySelectorAll(".js-show-on-scroll");
+        targets.forEach(function (target) {
+          target.classList.add("opacity-0");
+          observer.observe(target);
+        });
+      
+
+    </script>
+
+    <!-- modal  -->
+    <script type="text/javascript">
+      function toggleModal(modalID) {
+        document.getElementById(modalID).classList.toggle("hidden");
+        document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+        document.getElementById(modalID).classList.toggle("flex");
+        document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+      }
+    </script>
+
+    <!-- Navbar -->
+    <script>
+      function toggleNavbar(collapseID) {
+        document.getElementById(collapseID).classList.toggle("hidden");
+        document.getElementById(collapseID).classList.toggle("flex");
+      }
+    </script>
   </body>
 </html>
