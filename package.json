@@ -2,8 +2,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel src/index.html",
-    "start": "parcel src/index.html",
+    "start": "parcel src/index.html --public-url .",
     "build": "parcel build src/index.html --public-url ."
+  },
+  "engines": {
+    "node": "16.6.x"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
@@ -17,4 +20,3 @@
   "version": "1.2.0",
   "name": "tailwindcss-open-template"
 }
-  
