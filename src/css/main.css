@@ -12,7 +12,7 @@
 }
 
 .title {
-  @apply mb-4 text-3xl font-extrabold text-center text-white;
+  @apply mb-4 text-3xl font-extrabold text-center text-black;
 }
 
 .title-small {
@@ -20,11 +20,11 @@
 }
 
 .intro {
-  @apply text-xl text-gray-500 text-center mx-8 mb-12 max-w-sm mx-auto;
+  @apply text-xl text-gray-700 text-center mx-8 mb-12 max-w-sm mx-auto;
 }
 
 .text {
-  @apply text-xl text-gray-500;
+  @apply text-xl text-gray-600;
 }
 
 @tailwind utilities;
