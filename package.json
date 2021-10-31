@@ -2,8 +2,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel src/index.html",
-    "start": "parcel src/index.html --out-dir docs",
-    "build": "parcel build src/index.html --out-dir docs --public-url ./"
+    "start": "npx parcel src/index.html",
+    "build": "npx parcel build src/index.html --public-url ./"
   },
   "engines": {
     "node": "16.6.x",
